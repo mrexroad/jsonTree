@@ -9,7 +9,7 @@
 
   function jsonTree (json, options) {
       this.json = json;
-      this.labels = [];      
+      this.labels = [];
       this.html = '';
       this.opt = extend({}, defaults, options);
       this.init();
@@ -19,7 +19,7 @@
 
     init: function() {
         this.renderLabels();
-        this.walk(this.json);     
+        this.walk(this.json);
     },
 
     walk: function (json) {
@@ -29,10 +29,10 @@
 
         for(element in json){
             this.html += label.parent.openTag + label.child.openTag + label.keyLabel.openTag + this.renderElement(element) + label.keyLabel.closeTag;
-            if(typeof json[element] === 'object'){            
-                this.walk(json[element]);            
-            }else{            
-                this.html += json[element];         
+            if(typeof json[element] === 'object'){
+              this.walk(json[element]);
+            }else{
+              this.html += json[element];
             }
             this.html += label.child.closeTag + label.parent.closeTag;
         }
@@ -58,7 +58,7 @@
     renderElement: function (element) {
       return this.opt.templateElement.replace('%element%', element);
     }
-  };  
+  };
 
   function render (tag, tags) {
       var idcss = tag.match(/(\.|\#)([^\.\#]+)/);
