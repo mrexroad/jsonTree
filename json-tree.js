@@ -1,3 +1,9 @@
+
+// json-tree
+// Version - 0.1
+//
+// License MIT
+//
 ;(function(window, undefined){
 
 var defaults = {
