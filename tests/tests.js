@@ -28,7 +28,6 @@ test( "test1 change html structure", function() {
   };
 
   var exp = jsontree(json, { parentLabel: 'span', childLabel: 'div', keyLabel: 'i' });
-  console.log(exp);
   equal( exp, "<span><div><i>lap: </i><span><div><i>nombre: </i>Eric</div><div><i>apellido: </i>Ponce</div></span></div></span>", "Passed!" );
 });
 
@@ -39,7 +38,6 @@ test( "test1 change html structure and add a class", function() {
   };
 
   var exp = jsontree(json, { parentLabel: 'span', childLabel: 'div', keyLabel: 'i.key' });
-  console.log(exp);
   equal( exp, '<span><div><i class="key">lap: </i><span><div><i class="key">nombre: </i>Eric</div><div><i class="key">apellido: </i>Ponce</div></span></div></span>', "Passed!" );
 });
 
@@ -50,7 +48,6 @@ test( "test1 change html structure, add a class and template element", function(
   };
 
   var exp = jsontree(json, { parentLabel: 'span', childLabel: 'div', keyLabel: 'i.key', keyTemplate: '%element%# ' });
-  console.log(exp);
   equal( exp, '<span><div><i class="key">lap# </i><span><div><i class="key">nombre# </i>Eric</div><div><i class="key">apellido# </i>Ponce</div></span></div></span>', "Passed!" );
 });
 
