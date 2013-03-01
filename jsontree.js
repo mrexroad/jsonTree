@@ -1,5 +1,5 @@
 // jsonTree
-// Version - 0.1.1
+// Version - 0.1.2
 // @author Eric Ponce
 // License MIT
 //
@@ -38,7 +38,7 @@ function render (tag, tags) {
     if (idcss[1] === '#') {
       tags.id = idcss[2];
     }else if(idcss[1] === '.') {
-      tags.css = tags['class'] || [];
+      tags.css = tags.css || [];
       tags.css.push(idcss[2]);
     }
     render(replace.call(tag, idcss[0], ''), tags);
