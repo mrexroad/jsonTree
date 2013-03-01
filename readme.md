@@ -1,3 +1,5 @@
+# jsonTree [![Build Status](https://travis-ci.org/trico/jsonTree.png?branch=master)](https://travis-ci.org/trico/jsonTree)
+
 # Usage
 ```js
 var json = { 
